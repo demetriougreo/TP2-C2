@@ -1,0 +1,100 @@
+\documentclass[a4paper, 12pt,oneside]{article}
+%On peut changer "oneside" en "twoside" si on sait que le résultat sera recto-verso.
+%Cela influence les marges (pas ici car elles sont identiques à droite et à gauche)
+
+% pour l'inclusion de figures en eps,pdf,jpg,....
+\usepackage{graphicx}
+%Marges. Désactiver pour utiliser les valeurs LaTeX par défaut
+%\usepackage[top=2.5cm, bottom=2cm, left=2cm, right=2cm, showframe]{geometry}
+\usepackage[top=2.5cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{wrapfig}
+\usepackage{longtable}
+% quelques symboles mathematiques en plus
+\usepackage{amsmath}
+\usepackage{booktabs}
+%Non italics greek letters
+\usepackage{upgreek}
+
+\usepackage{floatrow}
+% Table float box with bottom caption, box width adjusted to content
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+\usepackage{blindtext}
+
+\usepackage{float}%EpicMove
+% le tout en langue francaise
+%\usepackage[francais]{babel}
+
+% on peut ecrire directement les charactères avec l'accent
+\usepackage[T1]{fontenc}
+
+% a utiliser sur Linux/Windows
+%\usepackage[latin1]{inputenc}
+
+% a utiliser avec UTF8
+\usepackage[utf8]{inputenc}
+%Très utiles pour les groupes mixtes mac/PC. Un fichier texte enregistré sous codage UTF-8 est lisible dans les deux environnement.
+%Plus de problème de caractères accentués et spéciaux qui ne s'affichent pas
+
+\usepackage{subcaption}
+
+% a utiliser sur le Mac
+%\usepackage[applemac]{inputenc}
+
+% pour l'inclusion de liens dans le document (pdflatex)
+\usepackage[colorlinks,bookmarks=false,linkcolor=black,urlcolor=blue, citecolor=black]{hyperref}
+
+%Pour l'utilisation plus simple des unités et fractions
+\usepackage{units}
+
+%Pour utiliser du time new roman... Comenter pour utiliser du ComputerModern
+%\usepackage{mathptmx}
+
+%Pour du code non interprété
+\usepackage{verbatim}
+\usepackage{verbdef}% http://ctan.org/pkg/verbdef
+
+%Pour changer la taille des titres de section et subsection. Ajoutez manuellement les autres styles si besoin.
+\makeatletter
+\renewcommand{\section}{\@startsection {section}{1}{\z@}%
+             {-3.5ex \@plus -1ex \@minus -.2ex}%
+             {2.3ex \@plus.2ex}%
+             {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\makeatletter
+\renewcommand{\subsection}{\@startsection {subsection}{1}{\z@}%
+             {-3.5ex \@plus -1ex \@minus -.2ex}%
+             {2.3ex \@plus.2ex}%
+             {\normalfont\normalsize\bfseries}}
+\makeatother
+
+%Début du document
+\begin{document}
+\title{\normalsize{Lab Work Report - Group N$^\circ$\\ 24 - Experiment F9-Optical grating spectroscopy}}
+\date{\normalsize{\today}}
+\author{\normalsize{Emiliano Cruz Aranda}\and \normalsize{Georgios Demetriou}}
+%Crée la page de titre
+%\maketitle
+%Ajoute la table des matières
+%\tableofcontents
+%Début du rapport à la page suivante
+%\newpage
+
+%De manière à ce que template latex ressemble au mieux au template word, on empêche latex de créer la page de titre et la créons à la main
+%En taille de police 12, la commande \large donne une taille de police 14
+%On utilise la commande \sffamily pour créer des caractères sans-serif
+
+\begin{center}
+\large\textbf{\sffamily Experiment N$^\circ$F9: Optical grating spectroscopy}\\%
+\large\sffamily Group N$^\circ$24: Emiliano Cruz Aranda, Georgios Demetriou\\%
+\large\sffamily \today\qquad Assistant: Camille Roy\\%
+\end{center}
+
+%			Introduction
+\section{Introduction}
+\vspace{-3mm}
+Spectroscopy is the study of the emission and absorption of electromagnetic radiation by matter. Spectroscopy techniques are useful for studying certain properties of matter, such as the energy levels of the electrons forming part of an atom, the chemical composition of far away stars and the atmospheres of exoplanets. Spectroscopy has also been useful in the development of certain theories such as quantum mechanics and relativity\cite{Britannica}. The method of optical grating spectroscopy relies on both the wavelike and particle behaviour of light. Letting light pass through a grating, the beams are separated into the different wavelengths emitted by the original light source and observed on the screen. The goals of this experiment are to observe the light spectre emitted by different gases, compare these results to theoretical values, give an experimental value for Hydrogen's Rydberg constant $R_H$, and identify an unknown gas by observing its spectrum.
+
+
+\end{document}
